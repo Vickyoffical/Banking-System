@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".Account_operations">
+
+    <TextView
+        android:id="@+id/text_bankingSystem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:text="Banking System"/>
+
+    <TextView
+        android:id="@+id/text_Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/text_bankingSystem"
+        android:textSize="30dp"
+        android:text="Select One Option:"/>
+
+    <RadioGroup
+        android:id="@+id/rg_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/text_Account">
+
+        <RadioButton
+            android:id="@+id/rb_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Details"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cash Transactions"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_loan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loan Section"
+            android:textSize="20dp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_function"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Select"/>
+
+</RelativeLayout>

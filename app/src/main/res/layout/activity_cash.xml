@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".Cash">
+
+    <TextView
+        android:id="@+id/text_bankingSystem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:text="Banking System"/>
+
+    <TextView
+        android:id="@+id/text_cash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/text_bankingSystem"
+        android:textSize="30dp"
+        android:text="Cash Transaction"/>
+
+    <RadioGroup
+        android:id="@+id/rg_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/text_cash">
+
+        <RadioButton
+            android:id="@+id/rb_deposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deposit Cash"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_withdrwal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Withdrwal Cash"
+            android:textSize="20dp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_function"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Next"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_deposit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_next"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/depositAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:text="Amount"/>
+
+        <EditText
+            android:id="@+id/et_depositAmount"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/depositAmount"
+            android:layout_marginLeft="20dp"
+            android:inputType="number"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/btn_addDeposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/et_depositAmount"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:text="Add"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_outputDeposit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_deposit"
+        android:visibility="gone"
+        android:text=""/>
+
+    <RelativeLayout
+        android:id="@+id/rl_withdrwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_next"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/withdrwalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:text="Amount"/>
+
+        <EditText
+            android:id="@+id/et_withdrwalAmount"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/withdrwalAmount"
+            android:layout_marginLeft="20dp"
+            android:inputType="number"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/btn_addWithdrwal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/et_withdrwalAmount"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:text="Add"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_outputWithdrwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_withdrwal"
+        android:visibility="gone"
+        android:text=""/>
+
+    <Button
+        android:id="@+id/btn_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:textSize="20dp"
+        android:text="Menu"/>
+
+</RelativeLayout>
