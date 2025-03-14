@@ -83,7 +83,7 @@ public class Cash extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                deposit('+');
+                deposit();
 
             }
         });
@@ -92,7 +92,7 @@ public class Cash extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                withdrwal('-');
+                withdrwal();
 
             }
         });
@@ -104,16 +104,16 @@ public class Cash extends AppCompatActivity {
         });
     }
 
-    public void deposit(char operator){
+    public void deposit(){
 
         SharedPreferences shrdpre = getSharedPreferences("Data",MODE_PRIVATE);
 
-        String balance = shrdpre.getString("bal","0");
+        int balance = shrdpre.getInt("bal",0);
         String amountdep = editText_depositAmount.getText().toString();
 
         if (!amountdep.isEmpty()){
             double num1 = Double.parseDouble(amountdep);
-            double num2 = Double.parseDouble(balance);
+            double num2 = balance;
 
             num2 = num1 + num2;
             textView_outputDeposit.setText("" + num2);
@@ -122,16 +122,16 @@ public class Cash extends AppCompatActivity {
         }
     }
 
-    public void withdrwal(char operator){
+    public void withdrwal(){
 
         SharedPreferences shrdpre = getSharedPreferences("Data",MODE_PRIVATE);
 
-        String balance = shrdpre.getString("bal","0");
+        int balance = shrdpre.getInt("bal",0);
         String amountwit = editText_withdrwalDeposit.getText().toString();
 
         if (!amountwit.isEmpty()){
             double num1 = Double.parseDouble(amountwit);
-            double num2 = Double.parseDouble(balance);
+            double num2 = balance;
 
             num2 = num1 - num2;
             textView_outputWithdrwal.setText("" + num2);
