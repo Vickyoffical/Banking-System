@@ -1,10 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="30dp"
     tools:context=".Loan">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/text_bankingSystem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:text="Banking System"/>
+
+    <TextView
+        android:id="@+id/text_loan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/text_bankingSystem"
+        android:textSize="30dp"
+        android:text="Loan Section"/>
+
+    <RadioGroup
+        android:id="@+id/rg_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/text_loan">
+
+        <RadioButton
+            android:id="@+id/rb_applyForLoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apply For Loan"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_checkLoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Loan"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_payLoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay Pending Loan"
+            android:textSize="20dp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_function"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Next"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_applyLoan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_next"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/loanAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:text="Amount"/>
+
+        <EditText
+            android:id="@+id/et_loanAmount"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/loanAmount"
+            android:layout_marginLeft="20dp"
+            android:inputType="number"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/btn_applyLoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/et_loanAmount"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:text="Apply"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
