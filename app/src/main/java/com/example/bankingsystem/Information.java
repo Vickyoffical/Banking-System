@@ -106,7 +106,7 @@ public class Information extends AppCompatActivity {
     public void showBalance(){
 
         SharedPreferences shrdpre = getSharedPreferences("Data",MODE_PRIVATE);
-        String balance = shrdpre.getString("bal","No Balance Found");
+        int balance = shrdpre.getInt("bal",0);
 
         textView_balance.setText(balance);
     }
